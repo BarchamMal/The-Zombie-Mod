@@ -1,0 +1,20 @@
+{
+    "values": [
+    "minecraft:deep_frozen_ocean",
+    "minecraft:frozen_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:cold_ocean",
+    "minecraft:snowy_slopes",
+    "minecraft:snowy_plains",
+    "minecraft:snowy_beach",
+    "minecraft:snowy_taiga",
+    "minecraft:taiga",
+    "minecraft:meadow",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:frozen_river",
+    "minecraft:ice_spikes",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:cherry_grove",
+    "minecraft:frozen_peaks"
+]
+}

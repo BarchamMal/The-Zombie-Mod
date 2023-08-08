@@ -1,2 +1,2 @@
-# the-zombie-mod-template
+# The Zombie Mod
  A simple mod that adds many zombie variants

@@ -1,0 +1,10 @@
+{
+    "entity.the-zombie-mod.soggy_zombie":"Soggy Zombie",
+    "entity.the-zombie-mod.frozen_zombie":"Frozen Zombie",
+
+
+    "item.the-zombie-mod.soggy_zombie_spawn_egg":"Soggy Zombie Spawn Egg",
+    "item.the-zombie-mod.frozen_zombie_spawn_egg":"Frozen Zombie Spawn Egg",
+ 
+    "itemGroup.the-zombie-mod.the-zombie-mod":"The Zombie Mod"
+}

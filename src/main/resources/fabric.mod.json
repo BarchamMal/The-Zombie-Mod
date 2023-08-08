@@ -3,23 +3,23 @@
 	"id": "the-zombie-mod",
 	"version": "${version}",
 	"name": "The Zombie Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is an TheZombieMod description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/FabricMC/fabric-TheZombieMod-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/the-zombie-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"barch.tzm.ExampleMod"
+			"barch.tzm.TheZombieMod"
 		],
 		"client": [
-			"barch.tzm.ExampleModClient"
+			"barch.tzm.TheZombieModClient"
 		]
 	},
 	"mixins": [
