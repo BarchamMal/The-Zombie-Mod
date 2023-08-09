@@ -17,6 +17,10 @@ public class Tags {
         public static final TagKey<Biome> HUMID_HOT = ofBiome(NAMESPACE,"humid_hot");
         public static final TagKey<Biome> HOT_DRY = ofBiome(NAMESPACE,"hot_dry");
         public static final TagKey<Biome> COLD = ofBiome(NAMESPACE,"cold");
+        public static final TagKey<Biome> WOODS = ofBiome(NAMESPACE,"woods");
+        public static final TagKey<Biome> ZOMBIES_SPAWN_IN = ofBiome(NAMESPACE,"zombies_spawn_in");
+        public static final TagKey<Biome> GOLD = ofBiome(NAMESPACE,"gold");
+        public static final TagKey<Biome> MUSHROOM = ofBiome(NAMESPACE,"mushroom");
 
 
     }

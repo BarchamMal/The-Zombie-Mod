@@ -1,6 +1,12 @@
 {
   "values": [
     "the-zombie-mod:soggy_zombie",
+    "the-zombie-mod:foolish_zombie",
+    "the-zombie-mod:fiery_zombie",
+    "the-zombie-mod:dry_zombie",
+    "the-zombie-mod:scorched_zombie",
+    "the-zombie-mod:fungal_zombie",
+    "the-zombie-mod:rich_zombie",
     "the-zombie-mod:frozen_zombie"
   ]
 }
