@@ -1,10 +1,22 @@
 {
     "entity.the-zombie-mod.soggy_zombie":"Soggy Zombie",
     "entity.the-zombie-mod.frozen_zombie":"Frozen Zombie",
+    "entity.the-zombie-mod.scorched_zombie":"Scorched Zombie",
+    "entity.the-zombie-mod.dry_zombie":"Dry Zombie",
+    "entity.the-zombie-mod.foolish_zombie":"Foolish Zombie",
+    "entity.the-zombie-mod.fiery_zombie":"Fiery Zombie",
+    "entity.the-zombie-mod.fungal_zombie":"Fungal Zombie",
+    "entity.the-zombie-mod.rich_zombie":"Rich Zombie",
 
 
     "item.the-zombie-mod.soggy_zombie_spawn_egg":"Soggy Zombie Spawn Egg",
     "item.the-zombie-mod.frozen_zombie_spawn_egg":"Frozen Zombie Spawn Egg",
+    "item.the-zombie-mod.scorched_zombie_spawn_egg":"Scorched Zombie Spawn Egg",
+    "item.the-zombie-mod.dry_zombie_spawn_egg":"Dry Zombie Spawn Egg",
+    "item.the-zombie-mod.foolish_zombie_spawn_egg":"Foolish Zombie Spawn Egg",
+    "item.the-zombie-mod.fiery_zombie_spawn_egg":"Fiery Zombie Spawn Egg",
+    "item.the-zombie-mod.fungal_zombie_spawn_egg":"Fungal Zombie Spawn Egg",
+    "item.the-zombie-mod.rich_zombie_spawn_egg":"Rich Zombie Spawn Egg",
  
     "itemGroup.the-zombie-mod.the-zombie-mod":"The Zombie Mod"
 }

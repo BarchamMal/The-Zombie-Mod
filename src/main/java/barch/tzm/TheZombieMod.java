@@ -29,6 +29,7 @@ public class TheZombieMod implements ModInitializer {
 
 	public static final Entities ENTITIES = Entities.INSTANCE;
 
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
