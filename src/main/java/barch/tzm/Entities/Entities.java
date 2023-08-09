@@ -30,14 +30,14 @@ public class Entities {
     public static final EntityType<ModdedZombieEntity> SOGGY_ZOMBIE = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(NAMESPACE, "soggy_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.fixed(.6f, 1.99f)).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
     );
 
     // frozen_zombie
     public static final EntityType<ModdedZombieEntity> FROZEN_ZOMBIE = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(NAMESPACE, "frozen_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.fixed(.6f, 1.99f)).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
     );
 
     // -------------- Entities
