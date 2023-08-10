@@ -18,3 +18,7 @@ This mod adds zombie variants that replace the normal varients and drop better s
 ## Contributing
 * If you wish to help develope this mod, then check out the issues.
 * If you wish to add something else then please open an issue about it.
+
+## Credits
+- Art: BarchamMal
+- Code: BarchamMal
