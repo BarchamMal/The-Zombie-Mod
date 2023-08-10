@@ -28,3 +28,4 @@ Elevate your Minecraft experience with **The Zombie Mod**! This mod breathes new
 
 - Art: BarchamMal
 - Code: BarchamMal
+- Monkey: SamuelIH 🍌
