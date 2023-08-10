@@ -25,46 +25,14 @@ public class Entities {
 
     // -------------- Entities
 
-    public static final EntityType<ModdedZombieEntity> SOGGY_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "soggy_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> FROZEN_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "frozen_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> SCORCHED_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "scorched_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> DRY_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "dry_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> FOOLISH_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "foolish_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> FIERY_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "fiery_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> FUNGAL_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "fungal_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
-    public static final EntityType<ModdedZombieEntity> RICH_ZOMBIE = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "rich_zombie"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
-    );
+    public static final EntityType<ModdedZombieEntity> SOGGY_ZOMBIE = CreateZombieEntity("soggy");
+    public static final EntityType<ModdedZombieEntity> FROZEN_ZOMBIE = CreateZombieEntity("frozen");
+    public static final EntityType<ModdedZombieEntity> SCORCHED_ZOMBIE = CreateZombieEntity("scorched");
+    public static final EntityType<ModdedZombieEntity> DRY_ZOMBIE = CreateZombieEntity("dry");
+    public static final EntityType<ModdedZombieEntity> FOOLISH_ZOMBIE = CreateZombieEntity("foolish");
+    public static final EntityType<ModdedZombieEntity> FIERY_ZOMBIE = CreateZombieEntity("fiery");
+    public static final EntityType<ModdedZombieEntity> FUNGAL_ZOMBIE = CreateZombieEntity("fungal");
+    public static final EntityType<ModdedZombieEntity> RICH_ZOMBIE = CreateZombieEntity("rich");
 
     // -------------- Entities
 
@@ -86,6 +54,16 @@ public class Entities {
 
     // -------------- Items
 
+
+    private static EntityType<ModdedZombieEntity> CreateZombieEntity(String name) {
+
+        return Registry.register(
+                Registries.ENTITY_TYPE,
+                new Identifier(NAMESPACE, name+"_zombie"),
+                FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
+        );
+
+    }
 
     public static void RegisterAll() {
 
