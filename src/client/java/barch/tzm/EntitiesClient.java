@@ -23,6 +23,8 @@ public class EntitiesClient {
     public static final EntityModelLayer MODEL_FIERY_ZOMBIE_LAYER = CreateModel("fiery_zombie");
     public static final EntityModelLayer MODEL_FUNGAL_ZOMBIE_LAYER = CreateModel("fungal_zombie");
     public static final EntityModelLayer MODEL_RICH_ZOMBIE_LAYER = CreateModel("rich_zombie");
+    public static final EntityModelLayer MODEL_SMART_ZOMBIE_LAYER = CreateModel("smart_zombie");
+    public static final EntityModelLayer MODEL_STUPID_ZOMBIE_LAYER = CreateModel("stupid_zombie");
 
     // -------------------- model layers
 
@@ -44,6 +46,8 @@ public class EntitiesClient {
         ZombieRendererFactory.BuildAndRegisterRenderer("fiery_zombie", FIERY_ZOMBIE);
         ZombieRendererFactory.BuildAndRegisterRenderer("fungal_zombie", FUNGAL_ZOMBIE);
         ZombieRendererFactory.BuildAndRegisterRenderer("rich_zombie", RICH_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("smart_zombie", SMART_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("stupid_zombie", STUPID_ZOMBIE);
 
         EntityModelLayerRegistry.registerModelLayer(MODEL_SOGGY_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(MODEL_FROZEN_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
@@ -53,6 +57,8 @@ public class EntitiesClient {
         EntityModelLayerRegistry.registerModelLayer(MODEL_FIERY_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(MODEL_FUNGAL_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(MODEL_RICH_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(MODEL_SMART_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(MODEL_STUPID_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
 
     }
 

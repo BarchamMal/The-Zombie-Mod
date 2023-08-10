@@ -33,6 +33,8 @@ public class Entities {
     public static final EntityType<ModdedZombieEntity> FIERY_ZOMBIE = CreateZombieEntity("fiery");
     public static final EntityType<ModdedZombieEntity> FUNGAL_ZOMBIE = CreateZombieEntity("fungal");
     public static final EntityType<ModdedZombieEntity> RICH_ZOMBIE = CreateZombieEntity("rich");
+    public static final EntityType<ModdedZombieEntity> SMART_ZOMBIE = CreateZombieEntity("smart");
+    public static final EntityType<ModdedZombieEntity> STUPID_ZOMBIE = CreateZombieEntity("stupid");
 
     // -------------- Entities
 
@@ -51,6 +53,8 @@ public class Entities {
     public static final Item FIERY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FIERY_ZOMBIE, 0x406A67, 0xA95C25, new FabricItemSettings());
     public static final Item FUNGAL_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FUNGAL_ZOMBIE, 0xBE2321, 0x977251, new FabricItemSettings());
     public static final Item RICH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(RICH_ZOMBIE, 0x00AAA7, 0xB9DC65, new FabricItemSettings());
+    public static final Item SMART_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SMART_ZOMBIE, 0x00AAA7, 0xFFEBB7, new FabricItemSettings());
+    public static final Item STUPID_ZOMBIE_SPAWN_EGG = new SpawnEggItem(STUPID_ZOMBIE, 0x00AAA7, 0x444444, new FabricItemSettings());
 
     // -------------- Items
 
@@ -83,6 +87,8 @@ public class Entities {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fiery_zombie_spawn_egg"), FIERY_ZOMBIE_SPAWN_EGG);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fungal_zombie_spawn_egg"), FUNGAL_ZOMBIE_SPAWN_EGG);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "rich_zombie_spawn_egg"), RICH_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "smart_zombie_spawn_egg"), SMART_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "stupid_zombie_spawn_egg"), STUPID_ZOMBIE_SPAWN_EGG);
 
     }
 
@@ -96,6 +102,8 @@ public class Entities {
         INSTANCE.addToGroup(FIERY_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
         INSTANCE.addToGroup(FUNGAL_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
         INSTANCE.addToGroup(RICH_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
+        INSTANCE.addToGroup(SMART_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
+        INSTANCE.addToGroup(STUPID_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
 
     }
 
@@ -109,6 +117,8 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(FIERY_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
         FabricDefaultAttributeRegistry.register(FUNGAL_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
         FabricDefaultAttributeRegistry.register(RICH_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
+        FabricDefaultAttributeRegistry.register(SMART_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
+        FabricDefaultAttributeRegistry.register(STUPID_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
 
 
         BiomeModifications.addSpawn(BiomeSelectors.tag(HUMID_HOT), SpawnGroup.MONSTER, SOGGY_ZOMBIE, 1000, 1, 4);
@@ -119,6 +129,8 @@ public class Entities {
         BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, FIERY_ZOMBIE, 1000, 1, 4);
         BiomeModifications.addSpawn(BiomeSelectors.tag(MUSHROOM), SpawnGroup.MONSTER, FUNGAL_ZOMBIE, 1000, 1, 4);
         BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, RICH_ZOMBIE, 1000, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, SMART_ZOMBIE, 1000, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, STUPID_ZOMBIE, 1000, 1, 4);
 
 
     }

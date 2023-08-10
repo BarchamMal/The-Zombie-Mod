@@ -7,6 +7,8 @@
     "entity.the-zombie-mod.fiery_zombie":"Fiery Zombie",
     "entity.the-zombie-mod.fungal_zombie":"Fungal Zombie",
     "entity.the-zombie-mod.rich_zombie":"Rich Zombie",
+    "entity.the-zombie-mod.smart_zombie":"Smart Zombie",
+    "entity.the-zombie-mod.stupid_zombie":"Stupid Zombie",
 
 
     "item.the-zombie-mod.soggy_zombie_spawn_egg":"Soggy Zombie Spawn Egg",
@@ -17,6 +19,8 @@
     "item.the-zombie-mod.fiery_zombie_spawn_egg":"Fiery Zombie Spawn Egg",
     "item.the-zombie-mod.fungal_zombie_spawn_egg":"Fungal Zombie Spawn Egg",
     "item.the-zombie-mod.rich_zombie_spawn_egg":"Rich Zombie Spawn Egg",
+    "item.the-zombie-mod.smart_zombie_spawn_egg":"Smart Zombie Spawn Egg",
+    "item.the-zombie-mod.stupid_zombie_spawn_egg":"Stupid Zombie Spawn Egg",
  
     "itemGroup.the-zombie-mod.the-zombie-mod":"The Zombie Mod"
 }

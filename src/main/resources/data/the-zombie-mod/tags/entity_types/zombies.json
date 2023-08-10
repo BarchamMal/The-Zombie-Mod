@@ -7,6 +7,8 @@
     "the-zombie-mod:scorched_zombie",
     "the-zombie-mod:fungal_zombie",
     "the-zombie-mod:rich_zombie",
+    "the-zombie-mod:smart_zombie",
+    "the-zombie-mod:stupid_zombie",
     "the-zombie-mod:frozen_zombie"
   ]
 }
