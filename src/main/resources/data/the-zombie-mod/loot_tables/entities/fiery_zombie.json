@@ -78,19 +78,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_sword"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_helmet"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_chestplate"
+          "name": "minecraft:magma_cream"
         }
       ],
       "rolls": 3.0

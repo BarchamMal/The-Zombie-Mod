@@ -78,11 +78,11 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:carrot"
+          "name": "minecraft:cooked_beef"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:potato"
+          "name": "minecraft:baked_potato"
         }
       ],
       "rolls": 1.0
