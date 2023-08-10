@@ -1,8 +1,10 @@
 package barch.tzm;
 
+import barch.tzm.Entities.ModdedZombieEntity;
 import barch.tzm.render.ZombieRendererFactory;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.render.entity.model.*;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
 
 import static barch.tzm.Entities.Entities.*;
@@ -38,16 +40,16 @@ public class EntitiesClient {
 
     public static void RegisterAll() {
 
-        ZombieRendererFactory.BuildAndRegisterRenderer("soggy_zombie", SOGGY_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("frozen_zombie", FROZEN_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("scorched_zombie", SCORCHED_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("dry_zombie", DRY_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("foolish_zombie", FOOLISH_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("fiery_zombie", FIERY_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("fungal_zombie", FUNGAL_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("rich_zombie", RICH_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("smart_zombie", SMART_ZOMBIE);
-        ZombieRendererFactory.BuildAndRegisterRenderer("stupid_zombie", STUPID_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("soggy_zombie", (EntityType<ModdedZombieEntity>) SOGGY_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("frozen_zombie", (EntityType<ModdedZombieEntity>) FROZEN_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("scorched_zombie", (EntityType<ModdedZombieEntity>) SCORCHED_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("dry_zombie", (EntityType<ModdedZombieEntity>) DRY_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("foolish_zombie", (EntityType<ModdedZombieEntity>) FOOLISH_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("fiery_zombie", (EntityType<ModdedZombieEntity>) FIERY_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("fungal_zombie", (EntityType<ModdedZombieEntity>) FUNGAL_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("rich_zombie", (EntityType<ModdedZombieEntity>) RICH_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("smart_zombie", (EntityType<ModdedZombieEntity>) SMART_ZOMBIE);
+        ZombieRendererFactory.BuildAndRegisterRenderer("stupid_zombie", (EntityType<ModdedZombieEntity>) STUPID_ZOMBIE);
 
         EntityModelLayerRegistry.registerModelLayer(MODEL_SOGGY_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);
         EntityModelLayerRegistry.registerModelLayer(MODEL_FROZEN_ZOMBIE_LAYER, ModdedZombieModel::getTexturedModelData);

@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,16 +26,16 @@ public class Entities {
 
     // -------------- Entities
 
-    public static final EntityType<ModdedZombieEntity> SOGGY_ZOMBIE = CreateZombieEntity("soggy");
-    public static final EntityType<ModdedZombieEntity> FROZEN_ZOMBIE = CreateZombieEntity("frozen");
-    public static final EntityType<ModdedZombieEntity> SCORCHED_ZOMBIE = CreateZombieEntity("scorched");
-    public static final EntityType<ModdedZombieEntity> DRY_ZOMBIE = CreateZombieEntity("dry");
-    public static final EntityType<ModdedZombieEntity> FOOLISH_ZOMBIE = CreateZombieEntity("foolish");
-    public static final EntityType<ModdedZombieEntity> FIERY_ZOMBIE = CreateZombieEntity("fiery");
-    public static final EntityType<ModdedZombieEntity> FUNGAL_ZOMBIE = CreateZombieEntity("fungal");
-    public static final EntityType<ModdedZombieEntity> RICH_ZOMBIE = CreateZombieEntity("rich");
-    public static final EntityType<ModdedZombieEntity> SMART_ZOMBIE = CreateZombieEntity("smart");
-    public static final EntityType<ModdedZombieEntity> STUPID_ZOMBIE = CreateZombieEntity("stupid");
+    public static final EntityType<? extends ZombieEntity> SOGGY_ZOMBIE = CreateZombieEntity("soggy", "norm");
+    public static final EntityType<? extends ZombieEntity> FROZEN_ZOMBIE = CreateZombieEntity("frozen", "cold");
+    public static final EntityType<? extends ZombieEntity> SCORCHED_ZOMBIE = CreateZombieEntity("scorched", "fire");
+    public static final EntityType<? extends ZombieEntity> DRY_ZOMBIE = CreateZombieEntity("dry", "norm");
+    public static final EntityType<? extends ZombieEntity> FOOLISH_ZOMBIE = CreateZombieEntity("foolish", "norm");
+    public static final EntityType<? extends ZombieEntity> FIERY_ZOMBIE = CreateZombieEntity("fiery", "fire");
+    public static final EntityType<? extends ZombieEntity> FUNGAL_ZOMBIE = CreateZombieEntity("fungal", "norm");
+    public static final EntityType<? extends ZombieEntity> RICH_ZOMBIE = CreateZombieEntity("rich", "norm");
+    public static final EntityType<? extends ZombieEntity> SMART_ZOMBIE = CreateZombieEntity("smart", "norm");
+    public static final EntityType<? extends ZombieEntity> STUPID_ZOMBIE = CreateZombieEntity("stupid", "norm");
 
     // -------------- Entities
 
@@ -59,11 +60,31 @@ public class Entities {
     // -------------- Items
 
 
-    private static EntityType<ModdedZombieEntity> CreateZombieEntity(String name) {
+    private static EntityType<? extends ZombieEntity> CreateZombieEntity(String name, String type) {
+
+        if (type == "fire") {
+
+            return Registry.register(
+                    Registries.ENTITY_TYPE,
+                    new Identifier(NAMESPACE, name + "_zombie"),
+                    FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, FireZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
+            );
+
+        }
+
+        if (type == "cold") {
+
+            return Registry.register(
+                    Registries.ENTITY_TYPE,
+                    new Identifier(NAMESPACE, name + "_zombie"),
+                    FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ColdZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
+            );
+
+        }
 
         return Registry.register(
                 Registries.ENTITY_TYPE,
-                new Identifier(NAMESPACE, name+"_zombie"),
+                new Identifier(NAMESPACE, name + "_zombie"),
                 FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
         );
 
