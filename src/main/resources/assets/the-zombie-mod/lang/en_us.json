@@ -9,6 +9,7 @@
     "entity.the-zombie-mod.rich_zombie":"Rich Zombie",
     "entity.the-zombie-mod.smart_zombie":"Smart Zombie",
     "entity.the-zombie-mod.stupid_zombie":"Stupid Zombie",
+    "entity.the-zombie-mod.hungry_zombie":"Hungry Zombie",
 
 
     "item.the-zombie-mod.soggy_zombie_spawn_egg":"Soggy Zombie Spawn Egg",
@@ -21,6 +22,9 @@
     "item.the-zombie-mod.rich_zombie_spawn_egg":"Rich Zombie Spawn Egg",
     "item.the-zombie-mod.smart_zombie_spawn_egg":"Smart Zombie Spawn Egg",
     "item.the-zombie-mod.stupid_zombie_spawn_egg":"Stupid Zombie Spawn Egg",
+    "item.the-zombie-mod.hungry_zombie_spawn_egg":"Hungry Zombie Spawn Egg",
+
+    "block.the-zombie-mod.slime_layer":"Layer of Slime",
  
     "itemGroup.the-zombie-mod.the-zombie-mod":"The Zombie Mod"
 }

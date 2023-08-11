@@ -16,6 +16,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
+import java.util.Objects;
+
 import static barch.tzm.Entities.Tags.BiomeTags.*;
 import static barch.tzm.TheZombieMod.NAMESPACE;
 import static barch.tzm.TheZombieMod.THE_ZOMBIE_MOD;
@@ -26,16 +28,17 @@ public class Entities {
 
     // -------------- Entities
 
-    public static final EntityType<? extends ZombieEntity> SOGGY_ZOMBIE = CreateZombieEntity("soggy", "norm");
+    public static final EntityType<? extends ZombieEntity> SOGGY_ZOMBIE = CreateZombieEntity("soggy", "slime");
     public static final EntityType<? extends ZombieEntity> FROZEN_ZOMBIE = CreateZombieEntity("frozen", "cold");
     public static final EntityType<? extends ZombieEntity> SCORCHED_ZOMBIE = CreateZombieEntity("scorched", "fire");
     public static final EntityType<? extends ZombieEntity> DRY_ZOMBIE = CreateZombieEntity("dry", "norm");
     public static final EntityType<? extends ZombieEntity> FOOLISH_ZOMBIE = CreateZombieEntity("foolish", "norm");
     public static final EntityType<? extends ZombieEntity> FIERY_ZOMBIE = CreateZombieEntity("fiery", "fire");
-    public static final EntityType<? extends ZombieEntity> FUNGAL_ZOMBIE = CreateZombieEntity("fungal", "norm");
+    public static final EntityType<? extends ZombieEntity> FUNGAL_ZOMBIE = CreateZombieEntity("fungal", "slime");
     public static final EntityType<? extends ZombieEntity> RICH_ZOMBIE = CreateZombieEntity("rich", "norm");
     public static final EntityType<? extends ZombieEntity> SMART_ZOMBIE = CreateZombieEntity("smart", "norm");
     public static final EntityType<? extends ZombieEntity> STUPID_ZOMBIE = CreateZombieEntity("stupid", "norm");
+    public static final EntityType<? extends ZombieEntity> HUNGRY_ZOMBIE = CreateZombieEntity("hungry", "norm");
 
     // -------------- Entities
 
@@ -56,13 +59,14 @@ public class Entities {
     public static final Item RICH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(RICH_ZOMBIE, 0x00AAA7, 0xB9DC65, new FabricItemSettings());
     public static final Item SMART_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SMART_ZOMBIE, 0x00AAA7, 0xFFEBB7, new FabricItemSettings());
     public static final Item STUPID_ZOMBIE_SPAWN_EGG = new SpawnEggItem(STUPID_ZOMBIE, 0x00AAA7, 0x444444, new FabricItemSettings());
+    public static final Item HUNGRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(HUNGRY_ZOMBIE, 0x006663, 0x355821, new FabricItemSettings());
 
     // -------------- Items
 
 
     private static EntityType<? extends ZombieEntity> CreateZombieEntity(String name, String type) {
 
-        if (type == "fire") {
+        if (Objects.equals(type, "fire")) {
 
             return Registry.register(
                     Registries.ENTITY_TYPE,
@@ -72,12 +76,22 @@ public class Entities {
 
         }
 
-        if (type == "cold") {
+        if (Objects.equals(type, "cold")) {
 
             return Registry.register(
                     Registries.ENTITY_TYPE,
                     new Identifier(NAMESPACE, name + "_zombie"),
                     FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ColdZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
+            );
+
+        }
+
+        if (Objects.equals(type, "slime")) {
+
+            return Registry.register(
+                    Registries.ENTITY_TYPE,
+                    new Identifier(NAMESPACE, name + "_zombie"),
+                    FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SlimeZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
             );
 
         }
@@ -110,6 +124,7 @@ public class Entities {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "rich_zombie_spawn_egg"), RICH_ZOMBIE_SPAWN_EGG);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "smart_zombie_spawn_egg"), SMART_ZOMBIE_SPAWN_EGG);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "stupid_zombie_spawn_egg"), STUPID_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hungry_zombie_spawn_egg"), HUNGRY_ZOMBIE_SPAWN_EGG);
 
     }
 
@@ -125,6 +140,7 @@ public class Entities {
         INSTANCE.addToGroup(RICH_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
         INSTANCE.addToGroup(SMART_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
         INSTANCE.addToGroup(STUPID_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
+        INSTANCE.addToGroup(HUNGRY_ZOMBIE_SPAWN_EGG,Items.ZOMBIE_SPAWN_EGG,ItemGroups.SPAWN_EGGS);
 
     }
 
@@ -140,6 +156,7 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(RICH_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
         FabricDefaultAttributeRegistry.register(SMART_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
         FabricDefaultAttributeRegistry.register(STUPID_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
+        FabricDefaultAttributeRegistry.register(HUNGRY_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
 
 
         BiomeModifications.addSpawn(BiomeSelectors.tag(HUMID_HOT), SpawnGroup.MONSTER, SOGGY_ZOMBIE, 1000, 1, 4);
@@ -152,6 +169,7 @@ public class Entities {
         BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, RICH_ZOMBIE, 1000, 1, 4);
         BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, SMART_ZOMBIE, 1000, 1, 4);
         BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, STUPID_ZOMBIE, 1000, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, HUNGRY_ZOMBIE, 1000, 1, 4);
 
 
     }

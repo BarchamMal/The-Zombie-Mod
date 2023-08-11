@@ -1,6 +1,7 @@
 package barch.tzm;
 
 import barch.tzm.Entities.Entities;
+import barch.tzm.ModBlocks.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -28,6 +29,7 @@ public class TheZombieMod implements ModInitializer {
 
 
 	public static final Entities ENTITIES = Entities.INSTANCE;
+	public static final ModBlocks MOD_BLOCKS = ModBlocks.INSTANCE;
 
 
 	@Override
@@ -45,6 +47,7 @@ public class TheZombieMod implements ModInitializer {
 				.build());
 
 		ENTITIES.RegisterAll();
+		MOD_BLOCKS.RegisterAll();
 
 	}
 }
