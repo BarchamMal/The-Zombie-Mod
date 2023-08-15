@@ -3,7 +3,7 @@
 	"id": "the-zombie-mod",
 	"version": "${version}",
 	"name": "The Zombie Mod",
-	"description": "This is an TheZombieMod description! Tell everyone what your mod is about!",
+	"description": "See the README.md",
 	"authors": [
 		"Me!"
 	],
