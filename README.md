@@ -1,3 +1,5 @@
+[![Curseforge Downloads](https://cf.way2muchnoise.eu/1070380.svg)](https://www.curseforge.com/minecraft/mc-mods/the-zombie-mod)
+
 # The Zombie Mod
 
 ## Description
