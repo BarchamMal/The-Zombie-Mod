@@ -20,7 +20,7 @@ public class ZombieRendererFactory {
                 super(context);
             }
 
-            private Identifier TEXTURE = new Identifier(NAMESPACE, "textures/entity/zombies/"+NAME+".png");
+            private Identifier TEXTURE = Identifier.of(NAMESPACE, "textures/entity/zombies/"+NAME+".png");
 
 
             public Identifier getTexture(ZombieEntity zombieEntity) {

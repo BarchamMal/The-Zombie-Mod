@@ -25,11 +25,9 @@ public class TheZombieMod implements ModInitializer {
 	public static final String NAMESPACE = "the-zombie-mod";
 
 	// MC-Extended
-	public static final RegistryKey<ItemGroup> THE_ZOMBIE_MOD = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "the-zombie-mod"));
+	public static final RegistryKey<ItemGroup> THE_ZOMBIE_MOD = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(NAMESPACE, "the-zombie-mod"));
 
 
-	public static final Entities ENTITIES = Entities.INSTANCE;
-	public static final ModBlocks MOD_BLOCKS = ModBlocks.INSTANCE;
 
 
 	@Override
@@ -42,12 +40,12 @@ public class TheZombieMod implements ModInitializer {
 
 		// register the item groups
 		Registry.register(Registries.ITEM_GROUP, THE_ZOMBIE_MOD, FabricItemGroup.builder()
-				.icon(() -> new ItemStack(ENTITIES.SOGGY_ZOMBIE_SPAWN_EGG))
+				.icon(() -> new ItemStack(Entities.SOGGY_ZOMBIE_SPAWN_EGG))
 				.displayName(Text.translatable("itemGroup."+NAMESPACE+".the-zombie-mod"))
 				.build());
 
-		ENTITIES.RegisterAll();
-		MOD_BLOCKS.RegisterAll();
+		Entities.RegisterAll();
+		ModBlocks.RegisterAll();
 
 	}
 }

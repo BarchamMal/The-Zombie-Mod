@@ -2,7 +2,6 @@ package barch.tzm.Entities;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -23,8 +22,6 @@ import static barch.tzm.TheZombieMod.NAMESPACE;
 import static barch.tzm.TheZombieMod.THE_ZOMBIE_MOD;
 
 public class Entities {
-
-    public static final Entities INSTANCE = new Entities();
 
     // -------------- Entities
 
@@ -49,17 +46,17 @@ public class Entities {
 
     // zombie colors are 0x00AAA7, 0x799C65
 
-    public static final Item SOGGY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SOGGY_ZOMBIE, 0x00CCA7, 0x79AE65, new FabricItemSettings());
-    public static final Item FROZEN_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FROZEN_ZOMBIE, 0x00AAC9, 0x799C87, new FabricItemSettings());
-    public static final Item SCORCHED_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SCORCHED_ZOMBIE, 0x009A77, 0x496C35, new FabricItemSettings());
-    public static final Item DRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(DRY_ZOMBIE, 0x40EAA7, 0xB9DC65, new FabricItemSettings());
-    public static final Item FOOLISH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FOOLISH_ZOMBIE, 0x208A87, 0x997C45, new FabricItemSettings());
-    public static final Item FIERY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FIERY_ZOMBIE, 0x406A67, 0xA95C25, new FabricItemSettings());
-    public static final Item FUNGAL_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FUNGAL_ZOMBIE, 0xBE2321, 0x977251, new FabricItemSettings());
-    public static final Item RICH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(RICH_ZOMBIE, 0x00AAA7, 0xB9DC65, new FabricItemSettings());
-    public static final Item SMART_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SMART_ZOMBIE, 0x00AAA7, 0xFFEBB7, new FabricItemSettings());
-    public static final Item STUPID_ZOMBIE_SPAWN_EGG = new SpawnEggItem(STUPID_ZOMBIE, 0x00AAA7, 0x444444, new FabricItemSettings());
-    public static final Item HUNGRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(HUNGRY_ZOMBIE, 0x006663, 0x355821, new FabricItemSettings());
+    public static final Item SOGGY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SOGGY_ZOMBIE, 0x00CCA7, 0x79AE65, new Item.Settings());
+    public static final Item FROZEN_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FROZEN_ZOMBIE, 0x00AAC9, 0x799C87, new Item.Settings());
+    public static final Item SCORCHED_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SCORCHED_ZOMBIE, 0x009A77, 0x496C35, new Item.Settings());
+    public static final Item DRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(DRY_ZOMBIE, 0x40EAA7, 0xB9DC65, new Item.Settings());
+    public static final Item FOOLISH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FOOLISH_ZOMBIE, 0x208A87, 0x997C45, new Item.Settings());
+    public static final Item FIERY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FIERY_ZOMBIE, 0x406A67, 0xA95C25, new Item.Settings());
+    public static final Item FUNGAL_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FUNGAL_ZOMBIE, 0xBE2321, 0x977251, new Item.Settings());
+    public static final Item RICH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(RICH_ZOMBIE, 0x00AAA7, 0xB9DC65, new Item.Settings());
+    public static final Item SMART_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SMART_ZOMBIE, 0x00AAA7, 0xFFEBB7, new Item.Settings());
+    public static final Item STUPID_ZOMBIE_SPAWN_EGG = new SpawnEggItem(STUPID_ZOMBIE, 0x00AAA7, 0x444444, new Item.Settings());
+    public static final Item HUNGRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(HUNGRY_ZOMBIE, 0x006663, 0x355821, new Item.Settings());
 
     // -------------- Items
 
@@ -70,7 +67,7 @@ public class Entities {
 
             return Registry.register(
                     Registries.ENTITY_TYPE,
-                    new Identifier(NAMESPACE, name + "_zombie"),
+                    Identifier.of(NAMESPACE, name + "_zombie"),
                     FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, FireZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
             );
 
@@ -80,7 +77,7 @@ public class Entities {
 
             return Registry.register(
                     Registries.ENTITY_TYPE,
-                    new Identifier(NAMESPACE, name + "_zombie"),
+                    Identifier.of(NAMESPACE, name + "_zombie"),
                     FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ColdZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
             );
 
@@ -90,7 +87,7 @@ public class Entities {
 
             return Registry.register(
                     Registries.ENTITY_TYPE,
-                    new Identifier(NAMESPACE, name + "_zombie"),
+                    Identifier.of(NAMESPACE, name + "_zombie"),
                     FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SlimeZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
             );
 
@@ -98,7 +95,7 @@ public class Entities {
 
         return Registry.register(
                 Registries.ENTITY_TYPE,
-                new Identifier(NAMESPACE, name + "_zombie"),
+                Identifier.of(NAMESPACE, name + "_zombie"),
                 FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ModdedZombieEntity::new).dimensions(EntityDimensions.changing(.6f, 1.99f)).build()
         );
 
@@ -114,17 +111,17 @@ public class Entities {
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "soggy_zombie_spawn_egg"), SOGGY_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "frozen_zombie_spawn_egg"), FROZEN_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "scorched_zombie_spawn_egg"), SCORCHED_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "dry_zombie_spawn_egg"), DRY_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "foolish_zombie_spawn_egg"), FOOLISH_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fiery_zombie_spawn_egg"), FIERY_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fungal_zombie_spawn_egg"), FUNGAL_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "rich_zombie_spawn_egg"), RICH_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "smart_zombie_spawn_egg"), SMART_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "stupid_zombie_spawn_egg"), STUPID_ZOMBIE_SPAWN_EGG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "hungry_zombie_spawn_egg"), HUNGRY_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "soggy_zombie_spawn_egg"), SOGGY_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "frozen_zombie_spawn_egg"), FROZEN_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "scorched_zombie_spawn_egg"), SCORCHED_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "dry_zombie_spawn_egg"), DRY_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "foolish_zombie_spawn_egg"), FOOLISH_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "fiery_zombie_spawn_egg"), FIERY_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "fungal_zombie_spawn_egg"), FUNGAL_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "rich_zombie_spawn_egg"), RICH_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "smart_zombie_spawn_egg"), SMART_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "stupid_zombie_spawn_egg"), STUPID_ZOMBIE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "hungry_zombie_spawn_egg"), HUNGRY_ZOMBIE_SPAWN_EGG);
 
     }
 

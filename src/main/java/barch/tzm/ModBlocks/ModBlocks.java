@@ -27,6 +27,6 @@ public class ModBlocks {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "slime_layer"), SLIME_LAYER);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "slime_layer"), SLIME_LAYER);
     }
 }

@@ -35,7 +35,7 @@ public class EntitiesClient {
 
     public static EntityModelLayer CreateModel(String name) {
 
-        return new EntityModelLayer(new Identifier(NAMESPACE, name), "main");
+        return new EntityModelLayer(Identifier.of(NAMESPACE, name), "main");
 
     }
 
