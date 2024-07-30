@@ -60,7 +60,6 @@ public class Entities {
 
     // -------------- Items
 
-
     private static EntityType<? extends ZombieEntity> CreateZombieEntity(String name, String type) {
 
         if (Objects.equals(type, "fire")) {
