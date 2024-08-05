@@ -27,9 +27,6 @@ public class TheZombieMod implements ModInitializer {
 	// MC-Extended
 	public static final RegistryKey<ItemGroup> THE_ZOMBIE_MOD = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(NAMESPACE, "the-zombie-mod"));
 
-
-
-
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

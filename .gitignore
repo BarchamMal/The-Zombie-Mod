@@ -1,5 +1,5 @@
+*.DS_Store
 .gradle/
 .idea/
 build/
 run/
-*.DS_Store

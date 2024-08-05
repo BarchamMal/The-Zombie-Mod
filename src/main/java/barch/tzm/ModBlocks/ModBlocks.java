@@ -1,6 +1,6 @@
 package barch.tzm.ModBlocks;
 
-import barch.tzm.Glue.BlockBuilder;
+import net.barch.barch_lib.Blocks.BlockBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
@@ -12,9 +12,6 @@ import net.minecraft.util.Identifier;
 import static barch.tzm.TheZombieMod.NAMESPACE;
 
 public class ModBlocks {
-
-    public static final ModBlocks INSTANCE = new ModBlocks();
-
 
     public static final Block SLIME_LAYER = new SnowBlock(BlockBuilder.CloneBlock(Blocks.SNOW).notSolid().sounds(BlockSoundGroup.SLIME));
 
