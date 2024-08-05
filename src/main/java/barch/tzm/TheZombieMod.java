@@ -1,5 +1,7 @@
 package barch.tzm;
 
+import barch.tzm.Config.TheZombieModConfig;
+import barch.tzm.Config.TheZombieModConfigManager;
 import barch.tzm.Entities.Entities;
 import barch.tzm.ModBlocks.ModBlocks;
 import net.fabricmc.api.ModInitializer;
@@ -27,6 +29,7 @@ public class TheZombieMod implements ModInitializer {
 	// MC-Extended
 	public static final RegistryKey<ItemGroup> THE_ZOMBIE_MOD = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(NAMESPACE, "the-zombie-mod"));
 
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -34,6 +37,8 @@ public class TheZombieMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+
+		TheZombieModConfigManager.loadConfig();
 
 		// register the item groups
 		Registry.register(Registries.ITEM_GROUP, THE_ZOMBIE_MOD, FabricItemGroup.builder()
@@ -45,4 +50,5 @@ public class TheZombieMod implements ModInitializer {
 		ModBlocks.RegisterAll();
 
 	}
+
 }

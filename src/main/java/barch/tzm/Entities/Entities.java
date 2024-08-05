@@ -1,5 +1,6 @@
 package barch.tzm.Entities;
 
+import barch.tzm.Config.TheZombieModConfigManager;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -20,6 +21,7 @@ import java.util.Objects;
 import static barch.tzm.Entities.Tags.BiomeTags.*;
 import static barch.tzm.TheZombieMod.NAMESPACE;
 import static barch.tzm.TheZombieMod.THE_ZOMBIE_MOD;
+import static barch.tzm.TheZombieMod.LOGGER;
 
 public class Entities {
 
@@ -141,6 +143,14 @@ public class Entities {
     }
 
     public static void RegisterEntities() {
+        int weight;
+
+        if (TheZombieModConfigManager.getConfig().zombiesTakeOver) {
+            weight = 100000;
+        }
+        else {
+            weight = 2;
+        }
 
         FabricDefaultAttributeRegistry.register(SOGGY_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
         FabricDefaultAttributeRegistry.register(FROZEN_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
@@ -155,18 +165,19 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(HUNGRY_ZOMBIE, ModdedZombieEntity.createModdedZombieAttributes());
 
 
-        BiomeModifications.addSpawn(BiomeSelectors.tag(HUMID_HOT), SpawnGroup.MONSTER, SOGGY_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(COLD), SpawnGroup.MONSTER, FROZEN_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, SCORCHED_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(HOT_DRY), SpawnGroup.MONSTER, DRY_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(GOLD), SpawnGroup.MONSTER, FOOLISH_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, FIERY_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(MUSHROOM), SpawnGroup.MONSTER, FUNGAL_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, RICH_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, SMART_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, STUPID_ZOMBIE, 1000, 1, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, HUNGRY_ZOMBIE, 1000, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(HUMID_HOT), SpawnGroup.MONSTER, SOGGY_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(COLD), SpawnGroup.MONSTER, FROZEN_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, SCORCHED_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(HOT_DRY), SpawnGroup.MONSTER, DRY_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(GOLD), SpawnGroup.MONSTER, FOOLISH_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, FIERY_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(MUSHROOM), SpawnGroup.MONSTER, FUNGAL_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, RICH_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, SMART_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, STUPID_ZOMBIE, weight, 1, 4);
+        BiomeModifications.addSpawn(BiomeSelectors.tag(ZOMBIES_SPAWN_IN), SpawnGroup.MONSTER, HUNGRY_ZOMBIE, weight, 1, 4);
 
+        LOGGER.info("Registered zombie spawning with a weight of " + weight);
 
     }
 

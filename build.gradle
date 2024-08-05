@@ -18,7 +18,11 @@ repositories {
 			includeGroup "curse.maven"
 		}
 	}
+	maven {
+		url "https://maven.shedaniel.me/"
+	}
 }
+
 
 loom {
     splitEnvironmentSourceSets()
@@ -44,6 +48,8 @@ dependencies {
 	// Barch-lib, a required library.
 	modImplementation "curse.maven:barch-lib-1071113:${project.barch_version}"
 
+	// for having a config
+	modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_conf_version}"
 }
 
 processResources {

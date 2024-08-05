@@ -1,5 +1,6 @@
 package barch.tzm.Entities;
 
+import barch.tzm.Config.TheZombieModConfigManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -21,7 +22,7 @@ public class ModdedZombieEntity extends ZombieEntity {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.0)
                 .add(EntityAttributes.ZOMBIE_SPAWN_REINFORCEMENTS, 0)
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 5);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, TheZombieModConfigManager.getConfig().zombieHealth);
     }
 
 
