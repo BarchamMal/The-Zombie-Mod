@@ -65,7 +65,7 @@
         {
           "condition": "minecraft:random_chance_with_enchanted_bonus",
           "enchantment": "minecraft:looting",
-          "unenchanted_chance": 0.025,
+          "unenchanted_chance": 0.05,
           "enchanted_chance": {
             "type": "minecraft:linear",
             "base": 0.1,
@@ -85,6 +85,10 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:mushroom_stem"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spider_eye"
         }
       ],
       "rolls": 3.0

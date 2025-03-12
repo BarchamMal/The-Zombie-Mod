@@ -46,8 +46,8 @@ public class TheZombieMod implements ModInitializer {
 				.displayName(Text.translatable("itemGroup."+NAMESPACE+".the-zombie-mod"))
 				.build());
 
-		Entities.RegisterAll();
-		ModBlocks.RegisterAll();
+		Entities.doSomething();
+		ModBlocks.doNothing();
 
 	}
 

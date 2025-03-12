@@ -1,0 +1,17 @@
+
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "the-zombie-mod:item/rich_zombie_spawn_egg",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4286094179
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 4293437696
+      }
+    ]
+  }
+}

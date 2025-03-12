@@ -1,0 +1,17 @@
+
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "the-zombie-mod:item/fiery_zombie_spawn_egg",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4283834912
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 4279566377
+      }
+    ]
+  }
+}

@@ -3,8 +3,9 @@ package barch.tzm.render;
 import barch.tzm.Entities.ModdedZombieEntity;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.client.render.entity.ZombieEntityRenderer;
+import net.minecraft.client.render.entity.state.ZombieEntityRenderState;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.util.Identifier;
 
 import static barch.tzm.TheZombieMod.NAMESPACE;
@@ -15,16 +16,21 @@ public class ZombieRendererFactory {
 
         String NAME = name;
 
-         class Renderer extends net.minecraft.client.render.entity.ZombieEntityRenderer {
+         class Renderer extends ZombieEntityRenderer {
             public Renderer(EntityRendererFactory.Context context) {
                 super(context);
             }
 
-            private Identifier TEXTURE = Identifier.of(NAMESPACE, "textures/entity/zombies/"+NAME+".png");
+            private Identifier TEXTURE = Identifier.of(NAMESPACE, "textures/entity/zombie/"+NAME+".png");
 
 
-            public Identifier getTexture(ZombieEntity zombieEntity) {
-                return TEXTURE;
+             @Override
+             public Identifier getTexture(ZombieEntityRenderState zombieEntityRenderState) {
+                 return TEXTURE;
+             }
+
+             public ZombieEntityRenderState createRenderState() {
+                return new ZombieEntityRenderState();
             }
 
         }

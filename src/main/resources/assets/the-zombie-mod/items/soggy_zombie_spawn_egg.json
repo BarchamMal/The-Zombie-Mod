@@ -1,0 +1,17 @@
+
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "the-zombie-mod:item/soggy_zombie_spawn_egg",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 4284317476
+      },
+      {
+        "type": "minecraft:constant",
+        "value": 4284761406
+      }
+    ]
+  }
+}

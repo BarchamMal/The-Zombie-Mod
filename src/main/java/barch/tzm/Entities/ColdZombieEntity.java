@@ -5,6 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.registry.tag.BiomeTags;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.GameRules;
@@ -21,7 +22,7 @@ public class ColdZombieEntity extends ModdedZombieEntity{
         super.tickMovement();
         if (!this.getWorld().isClient) {
 
-            if (!this.getWorld().getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
+            if (this.getWorld() instanceof ServerWorld && !((ServerWorld) this.getWorld()).getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
                 return;
             }
 

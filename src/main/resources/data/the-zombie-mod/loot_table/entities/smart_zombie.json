@@ -82,7 +82,7 @@
           "enchantment": "minecraft:looting",
           "count": {
             "min": 5,
-            "max": 50
+            "max": 25
           }
         }
           ],
@@ -96,7 +96,7 @@
           "enchantment": "minecraft:looting",
           "count": {
             "min": 5,
-            "max": 50
+            "max": 25
           }
         }
           ],

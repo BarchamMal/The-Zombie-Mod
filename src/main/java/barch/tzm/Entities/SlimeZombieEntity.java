@@ -4,12 +4,15 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.ZombieEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
+import static barch.tzm.Entities.Entities.SOGGY_ZOMBIE;
 import static barch.tzm.ModBlocks.ModBlocks.SLIME_LAYER;
 
 public class SlimeZombieEntity extends ModdedZombieEntity{
@@ -26,7 +29,8 @@ public class SlimeZombieEntity extends ModdedZombieEntity{
 
             boolean bl = this.burnsInDaylight() && this.isAffectedByDaylight();
 
-            if (!this.getWorld().getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
+
+            if (this.getWorld() instanceof ServerWorld && !((ServerWorld) this.getWorld()).getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
                 return;
             }
 
@@ -47,6 +51,13 @@ public class SlimeZombieEntity extends ModdedZombieEntity{
             }
         }
 
+    }
+
+    protected void convertInWater() {
+        this.convertTo(EntityType.DROWNED);
+        if (!this.isSilent()) {
+            this.getWorld().syncWorldEvent((PlayerEntity)null, 1040, this.getBlockPos(), 0);
+        }
     }
 
 }

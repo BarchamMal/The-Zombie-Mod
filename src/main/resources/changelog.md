@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [1.5.2]
+### Added
+- Nothing!
+
+### Changed
+- Zombie drops to include:
+  - spider eyes can be dropped by fungal zombies
+  - string can be dropped by soggy zombies
+  - gunpowder can be dropped by fiery and scorched zombies
+  - bones can be dropped by dry zombies
+
+### Updated
+- to 1.21.4
+- all zombie textures except fungal and foolish
+- all zombie spawn eggs
+- zombie converting/not-drowning-behavior
+- slime trail now drops slime balls 1 out of 32 times
+
 ## [1.5.1]
 ### Added
 - A config for this mod
@@ -59,7 +78,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - rich zombie
 - fungal zombie
 
-[1.5.1]: https://github.com/BarchamMal/The-Zombie-Mod/commit/
+[1.5.2]: https://github.com/BarchamMal/The-Zombie-Mod/commit/
+[1.5.1]: https://github.com/BarchamMal/The-Zombie-Mod/commit/b5e3d6bba388725d4b0b3b6ac0a98ee0b7de53b7
 [1.4.1]: https://github.com/BarchamMal/The-Zombie-Mod/commit/bce3a16a4677395b70cc36880ab02ec0de43ba83
 [1.3.0]: https://github.com/BarchamMal/The-Zombie-Mod/commit/ffec104c89550d0fcfe37cda00c164b8a020fb50
 [1.2.0]: https://github.com/BarchamMal/The-Zombie-Mod/commit/be61318820ef02f40c38157e6baf2fc546411b7d

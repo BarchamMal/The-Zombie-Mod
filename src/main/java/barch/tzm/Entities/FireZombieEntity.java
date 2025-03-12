@@ -4,6 +4,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.mob.ZombieEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.GameRules;
@@ -15,8 +17,8 @@ public class FireZombieEntity extends ModdedZombieEntity{
         super(entityType, world);
     }
 
-    public boolean tryAttack(Entity target) {
-        boolean bl = super.tryAttack(target);
+    public boolean tryAttack(ServerWorld world, Entity target) {
+        boolean bl = super.tryAttack(world, target);
         if (bl) {
             float f = this.getWorld().getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
             target.setOnFireFor(2 * (int)f);
@@ -32,7 +34,8 @@ public class FireZombieEntity extends ModdedZombieEntity{
 
             boolean bl = this.burnsInDaylight() && this.isAffectedByDaylight();
 
-            if (!this.getWorld().getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
+
+            if (this.getWorld() instanceof ServerWorld && !((ServerWorld) this.getWorld()).getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
                 return;
             }
 
@@ -54,6 +57,13 @@ public class FireZombieEntity extends ModdedZombieEntity{
             }
         }
 
+    }
+
+    protected void convertInWater() {
+        this.convertTo(Entities.FOOLISH_ZOMBIE);
+        if (!this.isSilent()) {
+            this.getWorld().syncWorldEvent((PlayerEntity)null, 1040, this.getBlockPos(), 0);
+        }
     }
 
 }
