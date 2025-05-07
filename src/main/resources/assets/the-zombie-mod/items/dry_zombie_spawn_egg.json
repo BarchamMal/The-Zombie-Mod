@@ -2,16 +2,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "the-zombie-mod:item/dry_zombie_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": 4291850240
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 4288922112
-      }
-    ]
+    "model": "the-zombie-mod:item/dry_zombie_spawn_egg"
   }
 }

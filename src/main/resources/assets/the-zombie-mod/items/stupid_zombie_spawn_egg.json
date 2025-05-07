@@ -2,16 +2,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "the-zombie-mod:item/stupid_zombie_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": 4284893755
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 4293119147
-      }
-    ]
+    "model": "the-zombie-mod:item/stupid_zombie_spawn_egg"
   }
 }

@@ -2,16 +2,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "the-zombie-mod:item/foolish_zombie_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": 4293108992
-      },
-      {
-        "type": "minecraft:constant",
-        "value": 4285104705
-      }
-    ]
+    "model": "the-zombie-mod:item/foolish_zombie_spawn_egg"
   }
 }
