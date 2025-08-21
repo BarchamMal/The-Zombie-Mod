@@ -49,19 +49,6 @@ public class Entities {
 
     // -------------- Items
 
-    // zombie colors are 0x00AAA7, 0x799C65
-//
-//    public static final Item SOGGY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SOGGY_ZOMBIE, 0x00CCA7, 0x79AE65, new Item.Settings());
-//    public static final Item FROZEN_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FROZEN_ZOMBIE, 0x00AAC9, 0x799C87, new Item.Settings());
-//    public static final Item SCORCHED_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SCORCHED_ZOMBIE, 0x009A77, 0x496C35, new Item.Settings());
-//    public static final Item DRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(DRY_ZOMBIE, 0x40EAA7, 0xB9DC65, new Item.Settings());
-//    public static final Item FOOLISH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FOOLISH_ZOMBIE, 0x208A87, 0x997C45, new Item.Settings());
-//    public static final Item FIERY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FIERY_ZOMBIE, 0x406A67, 0xA95C25, new Item.Settings());
-//    public static final Item FUNGAL_ZOMBIE_SPAWN_EGG = new SpawnEggItem(FUNGAL_ZOMBIE, 0xBE2321, 0x977251, new Item.Settings());
-//    public static final Item RICH_ZOMBIE_SPAWN_EGG = new SpawnEggItem(RICH_ZOMBIE, 0x00AAA7, 0xB9DC65, new Item.Settings());
-//    public static final Item SMART_ZOMBIE_SPAWN_EGG = new SpawnEggItem(SMART_ZOMBIE, 0x00AAA7, 0xFFEBB7, new Item.Settings());
-//    public static final Item STUPID_ZOMBIE_SPAWN_EGG = new SpawnEggItem(STUPID_ZOMBIE, 0x00AAA7, 0x444444, new Item.Settings());
-//    public static final Item HUNGRY_ZOMBIE_SPAWN_EGG = new SpawnEggItem(HUNGRY_ZOMBIE, 0x006663, 0x355821, new Item.Settings());
 
 
     public static final Item SOGGY_ZOMBIE_SPAWN_EGG = register("soggy", SOGGY_ZOMBIE);
