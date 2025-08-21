@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.4] - 2025-8-21
+### Updated
+- To Minecraft 1.21.6/7/8
+
 ## [1.5.3] - 2025-5-7
 ### Added
 - nothing
@@ -16,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - To Minecraft 1.21.5
 - To Gradle 8.12.
 
-## [1.5.2]
+## [1.5.2] - 2025-3-12
 ### Added
 - Nothing!
 
@@ -34,21 +38,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - zombie converting/not-drowning-behavior
 - slime trail now drops slime balls 1 out of 32 times
 
-## [1.5.1]
+## [1.5.1] - 2024-8-5
 ### Added
 - A config for this mod
   - zombiesTakeOver: true
   - zombieHealth: 5
 - Officially depend on Barch-Lib
 
-## [1.4.1]
+## [1.4.1] - 2024-7-30
 ### Fixed
 - zombie loot tables not dropping
 
 ### Changed
 - dry, foolish, and frozen zombie textures
 
-## [1.3.0]
+## [1.3.0] - 2023-8-11
 
 ### Added
 - hungry zombie
@@ -56,13 +60,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - soggy/fungal zombies will now leave a trail of slime
 
-## [1.2.0]
+## [1.2.0] - 2023-8-10
 
 ### Changed
 - fiery zombies/scorched zombies will randomly combust now and set things on fire
 - frozen zombies will leave a trail of snow
 
-## [1.1.0]
+## [1.1.0] - 2023-8-10
 ### Added
 - smart Zombie
 - stupid Zombie
@@ -72,13 +76,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - scorched zombie loot table
 
 
-## [1.0.1]
+## [1.0.1] - 2023-8-10
 ### Fixed
 - a bug where the game will glitch if the player is in water being chased by a horde of the-zombie-mod zombies.
 - The bug was caused by the follow range of the zombies being too high.
 
 
-## [1.0.0]
+## [1.0.0] - 2023-8-10
 ### Added
 - dry zombie
 - frozen zombie
@@ -88,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - rich zombie
 - fungal zombie
 
-[1.5.3]: https://github.com/BarchamMal/The-Zombie-Mod/commit/
+[1.5.4]: https://github.com/BarchamMal/The-Zombie-Mod/commit/
+[1.5.3]: https://github.com/BarchamMal/The-Zombie-Mod/commit/45442ffd72f45d7a4d45f40b7c2ec19e4adffcf8
 [1.5.2]: https://github.com/BarchamMal/The-Zombie-Mod/commit/2e2f119e37e8640ce6b57504c98bed143027e951
 [1.5.1]: https://github.com/BarchamMal/The-Zombie-Mod/commit/b5e3d6bba388725d4b0b3b6ac0a98ee0b7de53b7
 [1.4.1]: https://github.com/BarchamMal/The-Zombie-Mod/commit/bce3a16a4677395b70cc36880ab02ec0de43ba83
